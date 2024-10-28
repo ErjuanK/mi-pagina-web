@@ -13,6 +13,7 @@ html,body {
     padding: 0;
     width: 100%;
     height: 100%;
+    cursor: url('multimedia/lindo.png'), auto;
 }
 
 #video_fondo {
@@ -25,6 +26,10 @@ html,body {
     height: auto;
     z-index: -1000;
     overflow: hidden;
+}
+
+.video-mobile {
+    display: none;
 }
 
 .bienvenida {
@@ -60,6 +65,36 @@ button {
 	background: #fff;
 	color: #000000;
 	font-weight: bold;
+    border-radius: 8px;
 	border: none;
 	cursor: pointer;
+}
+
+button:hover {
+    cursor: url('multimedia/manito.png'), auto;
+    background: #3137fd;
+    color: #fff;
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    #video_fondo {
+      display: none;
+    }
+    .video-mobile {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+    }
+    .video-mobile video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 }
